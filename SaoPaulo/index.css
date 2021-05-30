@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#shieldTop {
+  width: 400px;
+  height: 120px;
+  border-top: solid black 1px;
+  border-left: solid black 1px;
+  border-right: solid black 1px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 -5px 20px  rgb(201, 201, 201);
+}
+
+#top {
+  margin: 0;
+  width: 360px;
+  height: 90px;
+
+  background-color: black;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#top h1 {
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Russo One", sans-serif;
+  font-size: 85px;
+}
+
+#shieldBottom  {
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-top: 270px solid black; 
+  
+  position: relative;
+}
+
+#shieldBottom::after {
+  content: '';
+
+  border-left: 199px solid transparent;
+  border-right: 199px solid transparent;
+  border-top: 269px solid #fff; 
+  
+  position: absolute;
+  top: -270px;
+  left: -199px
+}
+
+#bottom {
+  position: relative;
+}
+
+#bottom .redTriangle {
+  content: '';
+
+  border-bottom: 210px solid transparent;
+  border-right: 150px solid red;
+
+  position: absolute;
+  top: -270px;
+  left: -175px
+}
+
+#bottom .blackTriangle {
+  content: '';
+
+  border-bottom: 210px solid transparent;
+  border-left: 150px solid black;
+
+  position: absolute;
+  top: -270px;
+  right: -175px;
+}
